@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>{% block title %}Main Page{% endblock %}</title>
 </head>
+<!--{% include "./navigation.html" %}-->
+<nav>
+    <a href="{% url 'article_list' %}">Articles</a>
+</nav>
 <body>
     {% block content %}{% endblock %}
 </body>

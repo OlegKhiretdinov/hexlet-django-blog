@@ -5,14 +5,14 @@ from django.urls import reverse
 
 
 def index(request):
-    # return render(request, 'index.html', context={
+    # return render(request, 'article.html', context={
     #     'who': 'World',
     # })
     return redirect(reverse('article', kwargs={'article_id': 42, 'tag': 'python'}), permanent=True,)
 
 
 class HomePageView(TemplateView):
-    template_name = 'index.html'
+    template_name = 'article.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
