@@ -5,10 +5,9 @@ from django.urls import reverse
 
 
 def index(request):
-    # return render(request, 'article.html', context={
-    #     'who': 'World',
-    # })
-    return redirect(reverse('article', kwargs={'article_id': 42, 'tag': 'python'}), permanent=True,)
+    return render(request, 'article.html', context={
+        'who': 'World',
+    })
 
 
 class HomePageView(TemplateView):
@@ -21,7 +20,7 @@ class HomePageView(TemplateView):
 
     def get(self, request, *args, **kwargs):
         return redirect(
-            reverse('article', kwargs={'article_id': 42, 'tag': 'python'}),
+            reverse('article_list'),
             permanent=True,
         )
 
