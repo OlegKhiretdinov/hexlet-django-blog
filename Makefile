@@ -1,5 +1,5 @@
 start:
-	python3 manage.py runserver
+	poetry run python3 manage.py runserver
 
 migrate:
 	python3 manage.py makemigrations
