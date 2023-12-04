@@ -20,7 +20,7 @@ class HomePageView(TemplateView):
 
     def get(self, request, *args, **kwargs):
         return redirect(
-            reverse('article_list'),
+            reverse('articles'),
             permanent=True,
         )
 
